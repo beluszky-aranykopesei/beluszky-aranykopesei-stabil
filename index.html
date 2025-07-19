@@ -10,6 +10,26 @@
     <link rel="shortcut icon" href="Mini Beluszky.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Popup doboz -->
+<div id="beluszky-regi-popup" style="
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #FFD700;
+  padding: 16px 24px;
+  border: 3px solid #FFD700;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 1rem;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(255,215,0,0.6);
+  border-radius: 10px;
+  display: none;
+">
+  ⚠️ Belépés itt, de ne tévesszen meg – ez nem a legfrissebb verzió! Hibák, eltűnt aranyköpések és furcsa viselkedések előfordulhatnak.<br>
+  👉 Kattints az ikonra a stabil verzióhoz, mielőtt még Beluszky saját magát is megcáfolja!
+</div>
     <header>
         <div class="header-container">
             <h1 class="logo">Beluszky Aranyköpései</h1>
@@ -617,6 +637,7 @@
     <script src="scripts/Masolas.js"></script>
     <script src="scripts/NapiAranykopes.js"></script>
     <script src="scripts/Menu.js"></script>
+    <script src="scripts/main.js"></script>
     <script> document.getElementById('last-modified').textContent = document.lastModified;</script>
 </body>
 </html>
