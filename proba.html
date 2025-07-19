@@ -1,0 +1,91 @@
+<!-- BeluszkyAI logó gomb -->
+<div class="beluszky-ai-container">
+  <img src="BeluszkyAI.png" alt="BeluszkyAI" class="beluszky-ai-logo" onclick="toggleMenu(event)">
+  
+  <!-- Interaktív menü -->
+  <div class="beluszky-menu" id="beluszkyMenu">
+    <ul>
+      <li onclick="openCharacterAI()">🎙️ Beszélgetés Beluszkyval</li>
+      <li onclick="explainQuote()">🧠 Magyarázat az aranyköpéshez</li>
+      <li onclick="changeMood()">🎭 Hangulatváltoztatás</li>
+      <li onclick="generateNewQuote()">🧪 Új aranyköpés generálása</li>
+      <li onclick="shareQuote()">📤 Megosztás</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .beluszky-ai-container {
+    margin-left: auto;
+    display: inline-block;
+  }
+
+  .beluszky-ai-logo {
+    margin-left: auto;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .beluszky-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .beluszky-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .beluszky-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .beluszky-menu li:hover {
+    background: #f0f0f0;
+  }
+</style>
+
+<script>
+  function toggleMenu(event) {
+    const menu = document.getElementById('beluszkyMenu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    event.stopPropagation();
+  }
+
+  // Példafunkciók
+  function openCharacterAI() {
+    window.open('https://character.ai/chat?char=BeluszkyAI', '_blank');
+  }
+
+  function explainQuote() {
+    alert('Beluszky magyarázata: Ez az aranyköpés a létezés abszurditására utal, természetesen szarkasztikus stílusban.');
+  }
+
+  function changeMood() {
+    alert('Beluszky mostantól „lelkes” hangulatban válaszol.');
+  }
+
+  function generateNewQuote() {
+    alert('Új aranyköpés: „A logika csak akkor működik, ha nem én beszélek.”');
+  }
+
+  function shareQuote() {
+    alert('Megosztási lehetőségek hamarosan elérhetők!');
+  }
+
+  // Bezárás kattintásra bárhol máshol
+  document.addEventListener('click', () => {
+    document.getElementById('beluszkyMenu').style.display = 'none';
+  });
+</script>
